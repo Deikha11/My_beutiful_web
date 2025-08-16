@@ -7,7 +7,7 @@ function Header() {
     <header className="main-header">
       <div className="container">
         <div className="logo">
-          <a href="/">Your **Brand Logo** Here</a>
+          <a href="/">Beautiful web </a>
           {/* Optional: You can put an image logo here */}
           {/* <img src="/images/logo.png" alt="Your Brand Logo" /> */}
         </div>
