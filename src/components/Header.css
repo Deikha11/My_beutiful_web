@@ -1,0 +1,71 @@
+/* src/components/Header.css */
+.main-header {
+  background-color: var(--white-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.main-header .main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-header .main-nav ul li {
+  margin-left: 30px;
+}
+
+.main-header .main-nav ul li a {
+  font-weight: 600;
+  color: var(--text-color);
+  transition: color var(--transition-speed);
+}
+
+.main-header .main-nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.main-header .cta-button {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments for Header */
+@media (max-width: 768px) {
+  .main-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-header .main-nav ul {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-header .main-nav ul li {
+    margin: 0 10px 10px 10px;
+  }
+
+  .main-header .cta-button {
+    margin-top: 15px;
+  }
+}

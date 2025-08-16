@@ -1,0 +1,75 @@
+/* src/components/ServicesSection.css */
+.services-section {
+  background-color: var(--background-color);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.services-section .section-description {
+  font-size: 1.2rem;
+  color: var(--light-text-color);
+  max-width: 700px;
+  margin: 0 auto 60px auto; /* Center text and add space below */
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 30px; /* Space between cards */
+  justify-content: center; /* Center cards if they don't fill the row */
+}
+
+.service-card {
+  background-color: var(--white-color);
+  padding: 40px 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Soft shadow */
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.service-icon {
+  font-size: 3.5rem; /* Large icon size */
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.service-card h3 {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: var(--light-text-color);
+  line-height: 1.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services-section h2 {
+    font-size: 2.2rem;
+  }
+  .services-section .section-description {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack cards on very small screens */
+  }
+  .service-card {
+    padding: 30px 20px;
+  }
+}

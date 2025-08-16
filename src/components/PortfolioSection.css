@@ -1,0 +1,105 @@
+/* src/components/PortfolioSection.css */
+.portfolio-section {
+  background-color: var(--white-color);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.portfolio-section .section-description {
+  font-size: 1.2rem;
+  color: var(--light-text-color);
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 40px; /* Space between portfolio items */
+  justify-content: center;
+}
+
+.portfolio-item {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  overflow: hidden; /* Hide overflowing parts of the image */
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 250px; /* Fixed height for consistent look */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  display: block; /* Remove extra space below image */
+  transition: transform var(--transition-speed);
+}
+
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.05); /* Slight zoom on image hover */
+}
+
+.portfolio-info {
+  padding: 25px;
+  text-align: left;
+}
+
+.portfolio-info h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.portfolio-info p {
+  font-size: 0.95rem;
+  color: var(--light-text-color);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.view-project-button {
+  display: inline-flex; /* Allows icon and text to sit together */
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.view-project-button i {
+  margin-left: 8px; /* Space between text and icon */
+  font-size: 0.8rem;
+}
+
+.view-project-button:hover {
+  background-color: #e6d3c3; /* Slightly darker peach on hover */
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-section h2 {
+    font-size: 2.2rem;
+  }
+  .portfolio-section .section-description {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Stack items on very small screens */
+  }
+}

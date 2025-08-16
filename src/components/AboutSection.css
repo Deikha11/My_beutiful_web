@@ -1,0 +1,82 @@
+/* src/components/AboutSection.css */
+.about-section {
+  background-color: var(--white-color);
+  padding: 100px 0; /* More padding for a spacious feel */
+}
+
+.about-section .about-content {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  gap: 50px; /* Space between image and text */
+  text-align: left; /* Align text to the left within its column */
+}
+
+.about-section .about-image {
+  flex: 1; /* Takes up one part of the space */
+  display: flex; /* For centering the image if it's smaller */
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section .team-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius); /* Rounded corners for the image */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Soft shadow */
+  transition: transform var(--transition-speed);
+}
+
+.about-section .team-photo:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.about-section .about-text {
+  flex: 1.5; /* Takes up 1.5 parts of the space, giving more room for text */
+}
+
+.about-section h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: var(--light-text-color);
+  margin-bottom: 20px;
+}
+
+.about-section .cta-button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about-section .about-content {
+    flex-direction: column; /* Stack image and text vertically */
+    text-align: center; /* Center text when stacked */
+    gap: 40px;
+  }
+
+  .about-section .about-text {
+    flex: none; /* Remove flex sizing */
+  }
+
+  .about-section h2 {
+    font-size: 2.2rem;
+  }
+  .about-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 0;
+  }
+}
